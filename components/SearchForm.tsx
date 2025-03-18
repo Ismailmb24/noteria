@@ -39,7 +39,7 @@ export default function  SearchForm() {
                         placeholder="Search"
                         onChange={(e) => setSearchVal(e.target.value)}
                         />
-                        {(!!search_val) && <SearchReset query={query} setVal={setSearchVal} />}
+                        {(!!search_val) && <SearchReset setVal={setSearchVal} />}
                         <Button 
                         className="bg-slate-700 rounded-full md:h-7 md:w-7 dark:text-white"
                         type="submit"

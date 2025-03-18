@@ -15,7 +15,7 @@ export default function EditNoteForm({ id }: {id: string}) {
     const {title, content} = targetNote as NoteProps;
 
     const handleNoteEdit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault;
+        event.preventDefault();
         const formData = new FormData(event.currentTarget);
         const newNote = {
             title: formData.get("title"),

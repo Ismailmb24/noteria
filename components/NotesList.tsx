@@ -1,6 +1,5 @@
 "use client"
 
-import { useNotes } from "@/hook/useNote";
 import Note, { NoteProps } from "./Note";
 
 interface NotesListProps {
@@ -9,8 +8,8 @@ interface NotesListProps {
 
 export default function NotesList({ 
     notes,
-    onFavorite = (id: string) => {},
-    onRemove = (id: string) => {},
+    onFavorite = (id: string) => id,
+    onRemove = (id: string) => id,
  }: NotesListProps & {
     onFavorite?: (id: string) => void,
     onRemove?: (id: string) => void,

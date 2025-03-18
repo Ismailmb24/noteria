@@ -3,10 +3,8 @@ import { X } from "lucide-react";
 import Link from "next/link";
 
 export default function SearchReset({
-        query, 
         setVal
-    }: {
-        query: string, 
+    }: { 
         setVal: (searc_val: string) => void
     }) {
     const reset = () => {

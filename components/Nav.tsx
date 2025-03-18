@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import SearchForm from "./SearchForm"
-import { Heart, Plus, Search } from "lucide-react"
+import { Heart, Plus} from "lucide-react"
 import ToggleMode from "./ToggleMode"
 
 export default function Nav() {

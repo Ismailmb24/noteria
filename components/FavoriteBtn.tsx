@@ -1,10 +1,9 @@
 import { HeartIcon } from "lucide-react";
-import { NoteProps } from "./Note";
 
 export default function FavoriteBtn({
     id,
     favorite,
-    onFavorite = (id: string) => {}
+    onFavorite = (id: string) => id
 }: {
     id: string,
     favorite: boolean,

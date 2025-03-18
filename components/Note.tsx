@@ -18,8 +18,8 @@ export default function Note({
     content,
     timestamp,
     favorite,
-    onFavorite = (id: string) => {},
-    onRemove = (id: string) => {},
+    onFavorite = (id: string) => id,
+    onRemove = (id: string) => id,
 }: NoteProps & {
     onFavorite?: (id: string) => void,
     onRemove?: (id: string) => void,

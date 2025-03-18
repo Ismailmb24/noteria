@@ -10,7 +10,7 @@ import { Button } from "./ui/button";
 
 export default function CreateNoteForm() {
     const handleNoteCreation = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault;
+        event.preventDefault();
         const formData = new FormData(event.currentTarget);
         const newNote = {
             id: v4(),
