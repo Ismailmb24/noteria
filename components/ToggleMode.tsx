@@ -5,8 +5,10 @@ import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ToggleMode() {
-  if(!localStorage.theme) localStorage.setItem("theme", "");
-
+  useEffect(() => {
+    if(!localStorage.theme) localStorage.setItem("theme", "");
+  }, []);
+  
   const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark");
   useEffect(() => {
     if(typeof window !== "undefined") {
