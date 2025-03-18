@@ -8,8 +8,6 @@ import { Search } from "lucide-react";
 export default function  SearchForm() {
     const [search_val, setSearchVal] = useState("");
     const [isSearchMode, setSearchMode] = useState(false);
-    const search_params = new URLSearchParams(location.search);
-    const query = search_params.get("query") as string;
 
     return (
         <>

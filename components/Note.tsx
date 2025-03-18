@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { formatDate } from "@/lib/utils";
-import { Edit2, HeartIcon, Trash2 } from "lucide-react";
+import { Edit2, Trash2 } from "lucide-react";
 import Link from "next/link";
 import FavoriteBtn from "./FavoriteBtn";
 
