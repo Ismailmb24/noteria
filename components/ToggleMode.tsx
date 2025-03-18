@@ -5,22 +5,24 @@ import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ToggleMode() {
-    const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark");
-    useEffect(() => {
-      if(typeof window !== "undefined") {
-        detectMode();
-      }
-    }, []);
+  if(!localStorage.theme) localStorage.setItem("theme", "");
 
-    const handleToggleMode = () => {
-        toggleMode();
-        setIsDark(!isDark);
+  const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark");
+  useEffect(() => {
+    if(typeof window !== "undefined") {
+      detectMode();
     }
+  }, []);
 
-    return (
-        <button onClick={handleToggleMode} >{
-            isDark ? <Sun className="size-6" />
-            : <Moon className="size-6" />
-        }</button>
-    );
+  const handleToggleMode = () => {
+      toggleMode();
+      setIsDark(!isDark);
+  }
+
+  return (
+      <button onClick={handleToggleMode} >{
+          isDark ? <Sun className="size-6" />
+          : <Moon className="size-6" />
+      }</button>
+  );
 }
